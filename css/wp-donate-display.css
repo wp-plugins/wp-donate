@@ -1,0 +1,351 @@
+/*
+* WP-donate - Default Stylesheet
+*/
+
+#wp-donate-wrap {
+        display:block;
+        padding:10px;
+        margin:0px;
+        width: 400px;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+}
+
+/* Payment Form Link */
+
+#wp-donate-modal-button {
+        margin:20px 0;
+        padding: 8px 15px;
+        min-width:100px;
+        display:inline-block;
+        text-align:center;
+        font-weight: bold;
+        font-size: 12px;
+        background: #1275FF;
+        border: 1px solid #155FB0;
+        color: white;
+        text-decoration: none;
+        text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+        background-image: -webkit-gradient(linear, left top, left bottom, from(#77B7FF), to(#017AFF));
+        background-image: -moz-linear-gradient(top, #77B7FF, #017AFF);
+        background-image: -o-linear-gradient(top, #77B7FF, #017AFF);
+        -webkit-box-shadow: inset 0 1px 0 #98c9ff;
+        -moz-box-shadow: inset 0 1px 0 #98c9ff;
+        box-shadow: inset 0 1px 0 #98c9ff;
+        -o-border-radius: 4px;
+        -moz-border-radius: 4px;
+        -webkit-border-radius: 4px;
+        border-radius: 4px;
+        cursor: pointer; cursor: hand;
+}
+
+#wp-donate-types {
+        display:block;
+        width:256px;
+        height:18px;
+        background: url('../images/types.png') no-repeat top left;
+        margin-bottom:20px;
+}
+
+/* Payment Form Elements */
+
+form#wp-donate-payment-form {
+         display:block;
+}
+
+.donate-row-right,
+.donate-row-left{width:50%;}
+
+form#wp-donate-payment-form h2.donate-header {
+        padding:10px;
+        color:#fff;
+        font-size:14px;
+        font-weight:bold;
+        text-shadow: 0 -1px 1px rgba(0,0,0,0.3);
+        border-top:1px solid #268DFC;
+        border-bottom:1px solid #004EA2;
+        background:#0068DE;
+        margin-bottom:10px;
+        -moz-border-radius-topleft: 5px;
+        -moz-border-radius-topright: 5px;
+        -moz-border-radius-bottomright: 0px;
+        -moz-border-radius-bottomleft: 0px;
+        -webkit-border-radius: 5px 5px 0px 0px;
+        border-radius: 5px 5px 0px 0px;
+}
+
+form#wp-donate-payment-form p.donate-display-comment {
+        margin:3px 0;
+        font-size:12px;
+        color:#777;
+}
+
+form#wp-donate-payment-form label {
+        letter-spacing:1px;
+        text-transform:uppercase;
+}
+
+form#wp-donate-payment-form .donate-row {
+        overflow:visible;
+        clear:both;
+        padding:5px 10px;
+}
+
+form#wp-donate-payment-form .donate-row-left,
+form#wp-donate-payment-form .donate-row-right {
+        float:left;
+        overflow:auto;
+}
+
+form#wp-donate-payment-form .donate-submit-button {
+        position:relative;
+        margin:10px;
+        padding: 8px 15px;
+        display:block;
+        font-weight: bold;
+        font-size: 12px;
+        background: #1275FF;
+        border: 1px solid #155FB0;
+        color: white;
+        text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+        background-image: -webkit-gradient(linear, left top, left bottom, from(#77B7FF), to(#017AFF));
+        background-image: -moz-linear-gradient(top, #77B7FF, #017AFF);
+        background-image: -o-linear-gradient(top, #77B7FF, #017AFF);
+        -webkit-box-shadow: inset 0 1px 0 #98c9ff;
+        -moz-box-shadow: inset 0 1px 0 #98c9ff;
+        box-shadow: inset 0 1px 0 #98c9ff;
+        -o-border-radius: 4px;
+        -moz-border-radius: 4px;
+        -webkit-border-radius: 4px;
+        border-radius: 4px;
+        cursor: pointer; cursor: hand;
+}
+
+.donate-spinner {
+        display:none;
+        margin:10px;
+        padding: 8px 15px;
+        height:15px;
+        width:70px;
+        content:" ";
+        background: url('../images/spinner.gif') no-repeat 50% 50%;
+        border: 1px solid #afd5ff;
+        -o-border-radius: 4px;
+        -moz-border-radius: 4px;
+        -webkit-border-radius: 4px;
+}
+
+.donate-valid {
+        color: #638731 !important;
+        background-color:#d9fba8 !important;
+}
+
+.donate-invalid {
+        color:#873d31 !important;
+        background-color:#fbbcb1 !important;
+}
+
+.wp-donate-poweredby {
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+        color:#777;
+        font-size:10px;
+        padding:0 20px;
+}
+
+.wp-donate-poweredby a {
+        color:#0068DE;
+        text-decoration: none;
+}
+
+/* Response Styling */
+
+.wp-donate-notification {
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 12px;
+        width:360px;
+        padding:10px;
+        margin:10px 0 10px 10px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+}
+
+.wp-donate-currency {
+        text-transform: uppercase;
+}
+
+.wp-donate-success {
+        color:#345607;
+        background-color:#D1F2A5;
+        text-shadow:0 1px 1px rgba(255,255,255,0.2);
+}
+
+.wp-donate-failure {
+        color:#4E1E0F;
+        background-color:#FF9F80;
+        text-shadow:0 1px 1px rgba(255,255,255,0.1);
+}
+
+/* Form Styling */
+
+
+form#wp-donate-payment-form .wp-donate-details label {
+        color:#777;
+}
+
+form#wp-donate-payment-form .wp-donate-card label {
+        color:#0068DE;
+}
+
+form#wp-donate-payment-form .wp-donate-card input {
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+}
+
+form#wp-donate-payment-form .wp-donate-card input.card-cvc {
+        width:120px;
+}
+
+form#wp-donate-payment-form label,
+form#wp-donate-payment-form input,
+form#wp-donate-payment-form select,
+form#wp-donate-payment-form textarea {
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+        font-size: 14px !important;
+        font-weight: normal;
+        line-height: normal;
+        margin-bottom: 3px !important;
+}
+form#wp-donate-payment-form textarea,
+form#wp-donate-payment-form input {
+        position:relative;
+        width:338px;
+        background-color:#fff;
+}
+
+input.wp-donate-name {background: url('../images/h-name.png') no-repeat 8px 8px;}
+input.wp-donate-email {background: url('../images/h-email.png') no-repeat 8px 10px;}
+textarea.wp-donate-comment {background: url('../images/h-comment.png') no-repeat 8px 10px;}
+input.wp-donate-card-amount {background: url('../images/h-amount.png') no-repeat 8px 8px;}
+input.card-number {background: url('../images/h-card.png') no-repeat 8px 10px;}
+input.card-cvc {background: url('../images/h-cvc.png') no-repeat 8px 10px;}
+
+form#wp-donate-payment-form select {
+        cursor: pointer;
+}
+
+input[type=checkbox], input[type=radio] {
+        cursor: pointer;
+}
+
+.donate-expiry {
+        font-size:12px;
+        letter-spacing:1px;
+        color:#bbb;
+        text-shadow:0 1px 0 #fff;
+}
+
+form#wp-donate-payment-form select {
+        margin-top:0px !important;
+        display:block;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        padding: 2px 7px 2px 7px !important;
+        height: auto !important;
+        text-shadow: 0 1px 0 white;
+        background-image: -webkit-gradient(linear, left top, left bottom, from(#F9F9F9), to(#E8E8E8));
+        background-image: -moz-linear-gradient(top, #F9F9F9, #E8E8E8);
+        background-image: -o-linear-gradient(top, #F9F9F9, #E8E8E8);
+        -webkit-box-shadow: inset 0 1px 0 white;
+        -moz-box-shadow: inset 0 1px 0 white;
+        box-shadow: inset 0 1px 0 white;
+}
+
+form#wp-donate-payment-form select:hover {
+        background-image: -webkit-gradient(linear, left top, left bottom, from(#E8E8E8), to(#F9F9F9));
+        background-image: -moz-linear-gradient(top, #E8E8E8, #F9F9F9);
+        background-image: -o-linear-gradient(top, #E8E8E8, #F9F9F9);
+}
+
+form#wp-donate-payment-form input,
+form#wp-donate-payment-form textarea,
+form#wp-donate-payment-form select,
+form#wp-donate-payment-form .uneditable-input {
+        display: inline-block;
+        height: 18px;
+        padding: 8px 8px 8px 32px;
+        font-size: 13px;
+        line-height: 18px;
+        color: #808080;
+        border: 1px solid #ccc;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+}
+
+form#wp-donate-payment-form input[type=checkbox], form#wp-donate-payment-form input[type=radio] {
+        width: auto;
+        height: auto;
+        padding: 0;
+        margin: 3px 0;
+        *margin-top: 0;
+        /* IE6-7 */
+
+        line-height: normal;
+        border: none;
+}
+
+form#wp-donate-payment-form select {
+        height: 27px;
+        line-height: 27px;
+}
+
+form#wp-donate-payment-form input[type=button], form#wp-donate-payment-form input[type=reset], form#wp-donate-payment-form input[type=submit] {
+        width: auto;
+        height: auto;
+}
+
+form#wp-donate-payment-form input[type=checkbox] {
+        position:relative;
+        top:2px;
+        margin-right:5px;
+}
+
+form#wp-donate-payment-form select[multiple] {
+        height: inherit;
+        background-color: #ffffff;
+}
+form#wp-donate-payment-form textarea {
+        height: auto;
+}
+
+:-moz-placeholder {
+        color: #bfbfbf;
+}
+::-webkit-input-placeholder {
+        color: #bfbfbf;
+}
+form#wp-donate-payment-form input, form#wp-donate-payment-form textarea {
+        -webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
+        -moz-transition: border linear 0.2s, box-shadow linear 0.2s;
+        -ms-transition: border linear 0.2s, box-shadow linear 0.2s;
+        -o-transition: border linear 0.2s, box-shadow linear 0.2s;
+        transition: border linear 0.2s, box-shadow linear 0.2s;
+        -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+        -moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+        box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+form#wp-donate-payment-form input:focus, form#wp-donate-payment-form textarea:focus {
+        outline: 0;
+        border-color: rgba(0, 104, 222, 0.8);
+        -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(0, 104, 222, 0.6);
+        -moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(0, 104, 222, 0.6);
+        box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(0, 104, 222, 0.6);
+}
+input[type=file]:focus, input[type=checkbox]:focus, select:focus {
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+        outline: 1px dotted #666;
+}

@@ -1,0 +1,302 @@
+/*
+* WP-donate - Default Stylesheet
+*/
+
+h1.donate-title {
+    color:#ddd;
+    margin-bottom:20px;
+}
+
+#wp-donate-tab-settings th {
+    width:280px;
+}
+
+#wp-donate-tab-settings ul {
+    padding-left:20px;
+}
+
+#wp-donate-tab-settings li {
+    list-style: disc;
+    list-style-type:none;
+}
+
+/* jQuery Tabs */
+
+ul#wp-donate-tabs-nav {
+    position:relative;
+    margin-bottom:10px;
+    height:41px;
+    overflow:visible;
+    border-bottom:1px solid #ddd
+}
+
+ul#wp-donate-tabs-nav li {
+    text-align:center;
+    position:relative;
+    display:block;
+    float:left;
+    width:130px;
+    height:40px;
+    margin:0 10px 0 2px;
+    border-top:1px solid #cccccc;
+    border-left:1px solid #cccccc;
+    border-right:1px solid #cccccc;
+    background: #f2f2f2;
+    overflow:visible;
+    -moz-border-radius-topleft: 7px;
+    -moz-border-radius-topright: 0px;
+    -webkit-border-radius: 7px 7px 0px 0px;
+    border-radius: 7px 7px 0px 0px;
+    opacity:0.8;
+}
+
+ul#wp-donate-tabs-nav li.ui-state-active,
+ul#wp-donate-tabs-nav li:hover {
+    background: #fff;
+    opacity:1;
+}
+
+ul#wp-donate-tabs-nav li.ui-state-active a:before,
+ul#wp-donate-tabs-nav li:hover a:before {
+    position: absolute;
+    content: " ";
+    top:0;
+    bottom:-1px;
+    left:0;
+    right:0;
+    border-bottom:1px solid #fff;
+    z-index:200;
+}
+
+ul#wp-donate-tabs-nav li a {
+    position:absolute;
+    top:0;
+    left:0;
+    color:#777;
+    display:block;
+    padding:10px 15px;
+    height:20px;
+    line-height:20px;
+    width:100px;
+    text-decoration: none;
+    text-shadow: 0 1px 1px rgba(255,255,255,0.8);
+    text-transform:uppercase;
+    overflow:visible;
+}
+
+ul#wp-donate-tabs-nav li.ui-state-active {
+    background: #fff;
+}
+
+ul#wp-donate-tabs-nav li.ui-state-active a {
+    color:#555;
+}
+
+/* Transactions Table */
+
+table.wp-donate-projects,
+table.wp-donate-transactions {
+    margin-top:20px;
+    border-spacing: 0px;
+    width:95%;
+}
+
+table.wp-donate-projects thead,
+table.wp-donate-transactions thead {
+    position:relative;
+    background-color:#f2f2f2;
+}
+
+table.wp-donate-projects tr.wp-donate-absolute,
+table.wp-donate-transactions tr.wp-donate-absolute {
+    position:absolute;
+    z-index:0;
+    width:95%;
+    height:38px;
+}
+
+table.wp-donate-projects tr.wp-donate-absolute:before,
+table.wp-donate-transactions tr.wp-donate-absolute:before {
+    content: '';
+    position:absolute;
+    z-index:2;
+    display:block;
+    top:1px;
+    left:0;
+    bottom:1px;
+    right:0;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+    -webkit-box-shadow: inset 0px 1px 1px 0px rgba(0, 0, 0, 0.15),inset 0px 2px 3px 1px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: inset 0px 1px 1px 0px rgba(0, 0, 0, 0.15),inset 0px 2px 3px 1px rgba(0, 0, 0, 0.1);
+    box-shadow: inset 0px 1px 1px 0px rgba(0, 0, 0, 0.15),inset 0px 2px 3px 1px rgba(0, 0, 0, 0.1);
+}
+
+table.wp-donate-projects th,
+table.wp-donate-transactions th {
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+table.wp-donate-projects th,
+table.wp-donate-transactions th {
+    text-align:left;
+    color:#777;
+    text-shadow: 0 1px 0px #ffffff;
+}
+
+
+table.wp-donate-transactions td img.avatar {
+    float:left;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+table.wp-donate-transactions td span.donate-name {
+    line-height:30px;
+    padding-left:15px;
+}
+
+table.wp-donate-transactions td.donate-comment {
+    font-style:italic;
+    font-family:serif;
+    color:#777;
+    font-size:14px;
+    line-height:14px;
+}
+
+table.wp-donate-transactions span.donate-netamount {
+    color:#07DE00;
+    font-weight:bold;
+    font-size:14px;
+}
+
+table.wp-donate-projects th:first-child,
+table.wp-donate-transactions th:first-child {
+    -moz-border-radius-topleft: 7px;
+    -moz-border-radius-topright: 0px;
+    -moz-border-radius-bottomright: 0px;
+    -moz-border-radius-bottomleft: 7px;
+    -webkit-border-radius: 7px 0px 0px 7px;
+    border-radius: 7px 0px 0px 7px;
+}
+
+table.wp-donate-projects th:last-child,
+table.wp-donate-transactions th:last-child {
+    -moz-border-radius-topleft: 0px;
+    -moz-border-radius-topright: 7px;
+    -moz-border-radius-bottomright: 7px;
+    -moz-border-radius-bottomleft: 0px;
+    -webkit-border-radius: 0px 7px 7px 0px;
+    border-radius: 0px 7px 7px 0px;
+}
+
+table.wp-donate-projects tr td,
+table.wp-donate-transactions tr td {
+    border-bottom: 1px solid #ddd;
+}
+
+table.wp-donate-projects tr th,
+table.wp-donate-projects tr td,
+table.wp-donate-transactions tr th,
+table.wp-donate-transactions tr td {
+    padding: 10px 15px;
+}
+
+.dot-donate-live {
+    margin-right:10px;
+    position:relative;
+    top:2px;
+    display:inline-block;
+    background:#07DE00;
+    width:12px;
+    height:12px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    -webkit-box-shadow: inset 0px 3px 2px 1px rgba(255, 255, 255, 0.2);
+    -moz-box-shadow: inset 0px 3px 2px 1px rgba(255, 255, 255, 0.2);
+    box-shadow: inset 0px 5px 3px 1px rgba(255, 255, 255, 0.2);
+}
+
+.dot-donate-public {
+    margin-right:10px;
+    position:relative;
+    top:2px;
+    display:inline-block;
+    background:#0068DE;
+    width:12px;
+    height:12px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    -webkit-box-shadow: inset 0px 3px 2px 1px rgba(255, 255, 255, 0.2);
+    -moz-box-shadow: inset 0px 3px 2px 1px rgba(255, 255, 255, 0.2);
+    box-shadow: inset 0px 5px 3px 1px rgba(255, 255, 255, 0.2);
+}
+
+.dot-donate-test {
+    margin-right:10px;
+    position:relative;
+    top:2px;
+    display:inline-block;
+    background:#ddd;
+    width:12px;
+    height:12px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    -webkit-box-shadow: inset 0px 2px 2px 1px rgba(0,0,0, 0.1);
+    -moz-box-shadow: inset 0px 2px 2px 1px rgba(0,0,0, 0.1);
+    box-shadow: inset 0px 2px 3px 1px rgba(0,0,0, 0.1);
+}
+
+.progress-donate-wrap {
+    position:relative;
+    display:block;
+    background:#ddd;
+    width:100px;
+    height:16px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    -webkit-box-shadow: inset 0px 2px 2px 1px rgba(0,0,0, 0.1);
+    -moz-box-shadow: inset 0px 2px 2px 1px rgba(0,0,0, 0.1);
+    box-shadow: inset 0px 2px 3px 1px rgba(0,0,0, 0.1);
+}
+
+.progress-donate-value {
+    margin-right:10px;
+    position:absolute;
+    z-index:50;
+    top:2px;
+    left:2px;
+    display:block;
+    background:#0068DE;
+    height:12px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    -webkit-box-shadow: inset 0px 3px 2px 1px rgba(255, 255, 255, 0.2);
+    -moz-box-shadow: inset 0px 3px 2px 1px rgba(255, 255, 255, 0.2);
+    box-shadow: inset 0px 5px 3px 1px rgba(255, 255, 255, 0.2);
+}
+
+#wp-donate-tab-transactions form.pagination {
+    display:inline;
+    float:left;
+    margin:10px 10px 0 0;
+}
+
+.wp-donate-absolute
+{
+background:linear-gradient(to top, #373737 0px, #464646 5px) repeat scroll 0 0 #464646;
+color:#ffffff;
+}
+
+.required {
+    color: red;
+    padding-left: 5px;
+}
