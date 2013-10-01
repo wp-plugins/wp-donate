@@ -15,6 +15,7 @@ WP-Donate provides a payment form and recent donor by utilizing AuthorizeNet.
 WP Donate provides a payment form and recent donor widget by utilizing Authorize.net.
 
 What wp-donate provides:
+
 1. Listing of donor at admin area
 1. At admin area it allows to set details related to payment gateway
 1. From displayed at client side using Shortcode
@@ -51,10 +52,8 @@ It is only available to users with Authorize.Net payment gateway to receive dona
 
 == Changelog ==
 
-= 1.1 =
-* Provided FAQ section
-* Provided Screen shots to help users understanding and choosing plugin
-* Modified description
+= 1.2 =
+* Provided some more details about plugin
 
 == Upgrade Notice ==
 Nothing yet
