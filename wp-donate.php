@@ -60,6 +60,7 @@ function my_render_list_page()
 add_shortcode('Display Donate', 'wp_donate_form');
 if($_REQUEST['setting']==1)
 {
+	$wpdb->query($wpdb->prepare("INSERT INTO `".$wpdb->prefix."donate_setting` (`id`, `mod`, `api_login`, `key`) VALUES ('1', '', '', '')"));
 	$wpdb->query($wpdb->prepare("UPDATE `".$wpdb->prefix."donate_setting` SET `mod` = '".$_REQUEST['authnet_mode']."',`api_login` = '".$_REQUEST['x_login']."',`key` = '".$_REQUEST['x_tran_key']."' WHERE `id` =1"));
 }
 
