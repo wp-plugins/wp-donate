@@ -4,13 +4,13 @@
 	Plugin URI: http://wordpress.org/extend/plugins/wp-donate/
 	Description: Integration of the payment system donate using to AuthorizeNet.
 	Author: Ketan Ajani
-	Version: 1.0
+	Version: 1.3
 	Author URI: http://www.webconfines.com
 */
 session_start();
 
-define ( 'WP_DONATE_VERSION', '1.0' );
-define ( 'WP_DONATE_PATH',  WP_PLUGIN_URL . '/' . end( explode( DIRECTORY_SEPARATOR, dirname( __FILE__ ) ) ) );
+@define ( 'WP_DONATE_VERSION', '1.3' );
+@define ( 'WP_DONATE_PATH',  WP_PLUGIN_URL . '/' . end( explode( DIRECTORY_SEPARATOR, dirname( __FILE__ ) ) ) );
 include_once('includes/donate-display.php');
 include_once('includes/donate-function.php');
 include_once('includes/donate-options.php');
@@ -58,12 +58,14 @@ function my_render_list_page()
 	
 }
 add_shortcode('Display Donate', 'wp_donate_form');
-if($_REQUEST['setting']==1)
+if(isset($_REQUEST['setting']))
 {
-	$wpdb->query($wpdb->prepare("INSERT INTO `".$wpdb->prefix."donate_setting` (`id`, `mod`, `api_login`, `key`) VALUES ('1', '', '', '')"));
-	$wpdb->query($wpdb->prepare("UPDATE `".$wpdb->prefix."donate_setting` SET `mod` = '".$_REQUEST['authnet_mode']."',`api_login` = '".$_REQUEST['x_login']."',`key` = '".$_REQUEST['x_tran_key']."' WHERE `id` =1"));
+	if($_REQUEST['setting']==1)
+	{
+		$wpdb->query($wpdb->prepare("INSERT INTO `".$wpdb->prefix."donate_setting` (`id`, `mod`, `api_login`, `key`) VALUES ('1', '', '', '')"));
+		$wpdb->query($wpdb->prepare("UPDATE `".$wpdb->prefix."donate_setting` SET `mod` = '".$_REQUEST['authnet_mode']."',`api_login` = '".$_REQUEST['x_login']."',`key` = '".$_REQUEST['x_tran_key']."' WHERE `id` =1"));
+	}
 }
-
 
 register_activation_hook( __FILE__, 'donate_install' );
 

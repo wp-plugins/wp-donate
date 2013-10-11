@@ -55,5 +55,8 @@ It is only available to users with Authorize.Net payment gateway to receive dona
 = 1.2 =
 * Provided some more details about plugin
 
+= 1.3 =
+* Removed error message and redirected to correct page after success.
+
 == Upgrade Notice ==
 Nothing yet

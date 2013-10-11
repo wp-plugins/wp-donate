@@ -7,11 +7,9 @@
  * @since 1.0
  *
 */
-
-function wp_donate_form() {
-    ob_start();
-        
-    global $wpdb;
+	global $wpdb;
+    if(isset($_REQUEST['action']))
+    {
     if($_REQUEST['action']=='submitdonate')
     {		
 		$first_name = $_REQUEST['first_name'];
@@ -72,7 +70,12 @@ function wp_donate_form() {
 		}
 		
 	}
-    
+	}
+
+function wp_donate_form() {
+    ob_start();
+        global $wpdb;
+   
     ?>
     	<form method="post" name="donate_form" id="donate_form" action="<?php echo site_url();?>/donate-now/" autocomplete="off">
 			<input type="hidden" name="action" value="submitdonate" />
