@@ -59,7 +59,7 @@ function authorizepayment($METHOD_TO_USE,$REQUEST,$address1='',$city='',$state='
 					// Redirect the user back to your site.
 					$_SESSION['donate_msg'] = $response->response_reason_text;
 				   // echo "3";
-					header("location:".site_url().'/donate-now/');
+					header("Location:".site_url().$_SERVER['REQUEST_URI']);
 					exit;
 		
 				}
