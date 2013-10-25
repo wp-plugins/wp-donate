@@ -58,5 +58,8 @@ It is only available to users with Authorize.Net payment gateway to receive dona
 = 1.3 =
 * Removed error message and redirected to correct page after success.
 
+= 1.4 =
+* Modified database interactions for improvements and solved page redirect bug after successful payment by providing robust solution.
+
 == Upgrade Notice ==
 Nothing yet

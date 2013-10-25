@@ -39,3 +39,24 @@
 .wp-donate-recent .donate-item .donate-recent-content {
     color:#777;
 }
+
+
+.donate_btn_submit
+{
+height: 28px;
+float: none;
+padding: 0 22px;
+margin: 0 28px 0 218px;
+background: #608e3a;
+border: none;
+line-height: 28px;
+font-size: 14px;
+color: #ffffff;
+font-family: 'proxima-nova';
+font-weight: bold;
+border-radius: 15px;
+-webkit-border-radius: 15px;
+-moz-border-radius: 15px;
+}
+.donate_btn_submit:hover { background:#4e7a29; }
+

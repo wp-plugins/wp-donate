@@ -58,14 +58,17 @@
 		{
 			$sql = "INSERT INTO `".$wpdb->prefix."donate` (`first_name`, `last_name`, `organization`, `address`, `city`, `country`, `state`, `zip`, `phone`, `email`, `donation_type`, `amount`, `comment`, `status`,`date`) 
 			VALUES ('".$first_name."', '".$last_name."','".$organization."','".$address."','".$city."','".$country."','".$state."','".$zip."','".$phone."','".$email."','".$donation_type."','".$amount."','".$comment."', '1',now());";
-			$wpdb->query($wpdb->prepare($sql));
+			$wpdb->query($sql);
 			
-			header("Location:".site_url().'/donate-now/');
+			$post = get_post($post->ID);
+			$slug = $post->post_name;
+			
+			header("Location:".site_url().$_SERVER['REQUEST_URI']);
 			exit;
 		}
 		else
 		{
-			header("Location:".site_url().'/donate-now/');
+			header("Location:".site_url().$_SERVER['REQUEST_URI']);
 			exit;
 		}
 		
@@ -75,12 +78,11 @@
 function wp_donate_form() {
     ob_start();
         global $wpdb;
-   
     ?>
-    	<form method="post" name="donate_form" id="donate_form" action="<?php echo site_url();?>/donate-now/" autocomplete="off">
+    	<form method="post" name="donate_form" id="donate_form" action="<?php echo site_url().$_SERVER['REQUEST_URI'];?>" autocomplete="off">
 			<input type="hidden" name="action" value="submitdonate" />
 			<table width="100%" cellspacing="3" cellpadding="3">
-				<tr><td style="color:red;"><?php echo $_SESSION['donate_msg']; $_SESSION['donate_msg']='';?></td></tr>
+				<tr><td style="color:red;" colspan="4"><?php echo $_SESSION['donate_msg']; $_SESSION['donate_msg']='';?></td></tr>
 				<tr>
 					<td colspan="2" class="msg">
 						<p>You may use this form to make an online donation. Your gift will go to the area of greatest need. If you wish your donation to be designated for a particular area or program, please note your wishes in the comment box.</p>							 						
@@ -520,7 +522,7 @@ function wp_donate_form() {
 				</tr>														
 				<tr>
 					<td colspan="2" align="left">
-						<input type="button" class="button" name="btnSubmit" value="Next >>" onclick="checkData();">
+						<input type="button" class="button donate_btn_submit" name="btnSubmit" value="Donate Now" onclick="checkData();">
 					</td>
 				</tr>										
 			</table>

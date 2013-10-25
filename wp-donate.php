@@ -11,8 +11,8 @@ session_start();
 
 @define ( 'WP_DONATE_VERSION', '1.3' );
 @define ( 'WP_DONATE_PATH',  WP_PLUGIN_URL . '/' . end( explode( DIRECTORY_SEPARATOR, dirname( __FILE__ ) ) ) );
-include_once('includes/donate-display.php');
 include_once('includes/donate-function.php');
+include_once('includes/donate-display.php');
 include_once('includes/donate-options.php');
 
 add_action('wp_print_styles', 'load_wp_donate_css');
@@ -62,8 +62,8 @@ if(isset($_REQUEST['setting']))
 {
 	if($_REQUEST['setting']==1)
 	{
-		$wpdb->query($wpdb->prepare("INSERT INTO `".$wpdb->prefix."donate_setting` (`id`, `mod`, `api_login`, `key`) VALUES ('1', '', '', '')"));
-		$wpdb->query($wpdb->prepare("UPDATE `".$wpdb->prefix."donate_setting` SET `mod` = '".$_REQUEST['authnet_mode']."',`api_login` = '".$_REQUEST['x_login']."',`key` = '".$_REQUEST['x_tran_key']."' WHERE `id` =1"));
+		$wpdb->query("INSERT INTO `".$wpdb->prefix."donate_setting` (`id`, `mod`, `api_login`, `key`) VALUES ('1', '', '', '')");
+		$wpdb->query("UPDATE `".$wpdb->prefix."donate_setting` SET `mod` = '".$_REQUEST['authnet_mode']."',`api_login` = '".$_REQUEST['x_login']."',`key` = '".$_REQUEST['x_tran_key']."' WHERE `id` =1");
 	}
 }
 
