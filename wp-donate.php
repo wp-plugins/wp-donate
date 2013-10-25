@@ -4,12 +4,12 @@
 	Plugin URI: http://wordpress.org/extend/plugins/wp-donate/
 	Description: Integration of the payment system donate using to AuthorizeNet.
 	Author: Ketan Ajani
-	Version: 1.3
+	Version: 1.4
 	Author URI: http://www.webconfines.com
 */
 session_start();
 
-@define ( 'WP_DONATE_VERSION', '1.3' );
+@define ( 'WP_DONATE_VERSION', '1.4' );
 @define ( 'WP_DONATE_PATH',  WP_PLUGIN_URL . '/' . end( explode( DIRECTORY_SEPARATOR, dirname( __FILE__ ) ) ) );
 include_once('includes/donate-function.php');
 include_once('includes/donate-display.php');
