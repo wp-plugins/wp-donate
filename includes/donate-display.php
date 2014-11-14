@@ -1049,8 +1049,8 @@ function wp_donate_form() {
 				var currentCampaign = 0 ;
 				function checkData() {
 					var form = document.donate_form;			
-					var minimumAmount = 10 ;
-					var maximumAmount = 1000 ;
+					var minimumAmount = 1 ;
+					var maximumAmount = 100000 ;
 								
 					if (form.first_name.value == '') {
 						alert("Please enter your first name");

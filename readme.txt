@@ -61,5 +61,8 @@ It is only available to users with Authorize.Net payment gateway to receive dona
 = 1.4 =
 * Modified database interactions for improvements and solved page redirect bug after successful payment by providing robust solution.
 
+= 1.5 =
+* Modified donation limit. Earlier it was minimum $10 and maximum $1000, now minimum is $1 and maximum is $100000
+
 == Upgrade Notice ==
 Nothing yet
